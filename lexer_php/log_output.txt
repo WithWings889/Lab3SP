@@ -1,0 +1,115 @@
+---------------------------Tokens list---------------------------
+Token type              |row|col|  symbol table index and value
+-----------------------------------------------------------------
+//                      0 |0     0) |//comment 1|
+/* */                   1 |0     1) |/*multihuge and big comment*/|
+class                   5 |0     
+Identifier              5 |6     2) |A|
+{                       5 |8     
+public                  6 |4     
+$                       6 |11    3) |$r|
+;                       6 |13    
+function                7 |4     
+Identifier              7 |13    4) |__construct|
+(                       7 |24    
+)                       7 |25    
+{                       8 |4     
+$this                   9 |8     
+->                      9 |13    
+Identifier              9 |15    5) |r|
+=                       9 |17    
+IntValue                9 |19    6) |0|
+;                       9 |20    
+#                       9 |28    7) |#other comment|
+}                       10|4     
+}                       11|0     
+$                       13|0     8) |$a|
+=                       13|3     
+IntValue                13|5     9) |10|
+;                       13|7     
+$                       14|0     10) |$b|
+=                       14|3     
+StringValueInTwoQuotes  14|6     11) |a|
+;                       14|8     
+$                       16|0     12) |$d|
+=                       16|3     
+new                     16|5     
+Identifier              16|9     13) |A|
+(                       16|10    
+)                       16|11    
+;                       16|12    
+echo                    17|0     
+StringValueInTwoQuotes  17|6     14) |b $|
+.                       17|9     
+{                       17|9     
+$                       17|10    15) |$b|
+}                       17|12    
+Identifier              17|14    16) |aaaaaa|
+Identifier              17|21    17) |d|
+->                      17|22    
+Identifier              17|24    18) |c|
+}                       17|25    
+.                       17|26    
+StringValueInTwoQuotes  17|26    19) |\nwe |
+.                       18|3     
+{                       18|3     
+$                       18|4     20) |$Qweqwe|
+Identifier              18|12    21) |kosfdjifsuiicf|
+.                       18|26    
+StringValueInTwoQuotes  18|26    22) |\n|
+;                       19|1     
+$GLOBALS                21|0     
+[                       21|8     
+StringValueOneQuote     21|9     23) |'a'|
+]                       21|12    
+<<=                     21|14    
+IntValue                21|18    24) |10|
+echo                    23|0     
+StringValueInTwoQuotes  23|6     25) |a = |
+.                       23|12    
+$                       23|14    26) |$a|
+.                       23|17    
+StringValueInTwoQuotes  23|20    27) |b = $$b |
+.                       23|30    
+$                       23|32    28) |$d|
+->                      23|34    
+Identifier              23|36    29) |c|
+;                       23|37    
+
+---------------------------Invalid tokens---------------------------
+|row|col|    Error explanation
+--------------------------------------------------------------------
+17|25      Expected  |}|
+18|25      Expected  |}|
+
+---------------------------Symbol table---------------------------
+0) |//comment 1|
+1) |/*multihuge and big comment*/|
+2) |A|
+3) |$r|
+4) |__construct|
+5) |r|
+6) |0|
+7) |#other comment|
+8) |$a|
+9) |10|
+10) |$b|
+11) |a|
+12) |$d|
+13) |A|
+14) |b $|
+15) |$b|
+16) |aaaaaa|
+17) |d|
+18) |c|
+19) |\nwe |
+20) |$Qweqwe|
+21) |kosfdjifsuiicf|
+22) |\n|
+23) |'a'|
+24) |10|
+25) |a = |
+26) |$a|
+27) |b = $$b |
+28) |$d|
+29) |c|

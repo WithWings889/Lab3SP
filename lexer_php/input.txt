@@ -1,0 +1,24 @@
+//comment 1
+/*
+multi
+huge and big comment*/
+
+class A {
+    public $r;
+    function __construct()
+    {
+        $this->r = 0;       #other comment
+    }
+}
+
+$a = 10;
+$b = "a";
+
+$d = new A();
+echo "b ${$b} aaaaaa d->c}
+we {$Qweqwe kosfdjifsuiicf
+";
+
+$GLOBALS['a'] <<= 10
+
+echo "a = " . $a . "b = $$b " . $d->c;
